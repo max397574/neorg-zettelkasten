@@ -1,0 +1,60 @@
+@document.meta
+        title: zettelkasten_neorg
+        description: Zettelkasten specification for Neorg
+        authors: max
+        categories: 
+        created: 2022-01-05
+        version: 1.0
+@end
+
+| Last Changes
+
+= TOC
+
+* Zettelkasten in Neorg
+  
+ ** Format
+
+  *** Zettel format
+
+      The format of a Zettel is the following:
+      @code norg
+        §document.meta§
+      
+        * §Topic for the zettel§     
+      
+        #tags §tag§ §another tag§
+      
+        §Content§
+      
+      @end
+
+   **** Filenames
+
+        As filename you use the topic of the zettel.
+
+  *** Organization of the zettelkasten
+
+      You have all your zettels in one workspace which you can specify in the config.
+
+ ** Zettelkasten structure for Neorg
+
+  *** Search for zettels
+
+   **** Topics
+
+        You can search through all the topics of your zettels with the telescope picker.
+
+   **** Tags
+
+        You can search through the tags with a telescope picker. First you write a tag name and then
+        you can search {**** Topics} normally.
+
+  *** Backlinks
+
+ ** How to write a zettel 
+
+   
+
+#comment
+vim:tw=100:ft=norg:norl:
