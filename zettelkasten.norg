@@ -12,30 +12,53 @@
 = TOC
 
 * Zettelkasten in Neorg
-  
+ ** What is Zettelkasten ?
+    Zettelkasten is a method of knowledge management that focuses on creating links between
+    informations or different concepts, in order to ease information retrieval, and helps the user in creating ideas.
+    The method by itself consists on creating small notes, that represent something (an opinion, an
+    information, etc.). 
+    Linking notes should be done failry quickly and the user should easily jump
+    from a note to another.
+
+    As a note should hold any type of information, we should not enforce a particular method of
+    arranging it. 
+    Nevertheless, we should allow Neorg to easily find the different notes and connect them.
+    With that in mind, Neorg Zettelkasten (in short: `Neorg ZK`) should:
+
+    - Let the user create a note ith a freely structured content, but with the ability to customize
+    it.
+    - Add Neorg capabilities to quickly connect notes, in order to find liked notes. (with the help
+    of a unique identifier).
+
+
  ** Format
 
   *** Zettel format
-
-      The format of a Zettel is the following:
-      @code norg
-        §document.meta§
-      
-        * §Topic for the zettel§     
-      
-        #tags §tag§ §another tag§
-      
-        §Content§
-      
+      A zettel (synonym for note):
+      - /Should/ contain:
+      -- A unique identifier, written in the document with a tag inside `document.meta`:
+@code norg
+        @document.meta
+            id: §id§
+        @end
+      -- A title in the file name
       @end
-
-   **** Filenames
-
-        As filename you use the topic of the zettel.
+      - /Can/ contain:
+      -- `Tags` to add a more abstract way of linking notes:
+      @code norg
+        #tags §tag§ §another tag§
+      @end
+      -- `Links` to another zettel (the link name is still to be decided between the zettel id and
+      zettel title):
+      @code norg
+        ...
+        {:§link name§:}
+      @end
 
   *** Organization of the zettelkasten
 
       You have all your zettels in one workspace which you can specify in the config.
+      TODO: here
 
  ** Zettelkasten structure for Neorg
 
