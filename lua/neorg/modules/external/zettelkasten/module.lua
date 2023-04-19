@@ -8,7 +8,7 @@ module.setup = function()
     return {
         success = true,
         requires = {
-            "core.norg.dirman",
+            "core.dirman",
             "core.keybinds",
             "core.neorgcmd",
             "core.mode",
@@ -29,7 +29,7 @@ module.private = {
     end,
     new_zettel = function()
         local workspace = module.config.public.workspace
-        module.required["core.norg.dirman"].create_file("my zettel.norg", workspace)
+        module.required["core.dirman"].create_file("my zettel.norg", workspace)
     end,
     explore_zettel = function() end,
 }
@@ -41,7 +41,7 @@ module.config.public = {
 
 module.load = function()
     local workspace = module.config.public.workspace
-    module.private.workspace_path = module.required["core.norg.dirman"].get_workspace(workspace)
+    module.private.workspace_path = module.required["core.dirman"].get_workspace(workspace)
 
     module.required["core.neorgcmd"].add_commands_from_table({
         definitions = {
